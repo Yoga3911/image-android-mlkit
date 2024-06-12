@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ML Kit Face Detection and Tracking</string>
+    <string name="button_start_camera">Start Camera</string>
+    <string name="imageview_description">Capture Face</string>
+</resources>
