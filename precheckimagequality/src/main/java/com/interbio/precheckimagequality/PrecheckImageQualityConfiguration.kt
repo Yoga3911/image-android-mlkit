@@ -32,7 +32,7 @@ data class PrecheckImageQualityConfiguration(
     var sensitivityPitchStart: Double = -20.0,
     var sensitivityPitchEnd: Double = 20.0,
     var sensitivityGlasses: Double = 0.7,
-    var sensitivityMask: Double = 0.75,
+    var sensitivityMask: Double = 0.9,
     var sensitivityHat: Double = 0.75,
     var sensitivityBlur: Double = 0.9,
     var sensitivityPositionXStart: Double = 0.05,
