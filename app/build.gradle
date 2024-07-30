@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace 'com.empatnusabangsa.mlkitfacedetectionandtracking'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.empatnusabangsa.mlkitfacedetectionandtracking"
-        minSdk 28
-        targetSdk 32
+        minSdk 21
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -55,14 +55,11 @@ publishing {
         maven(MavenPublication) {
             groupId = 'com.github.Yoga3911'
             artifactId = 'image-android-mlkit'
-            version = "1.0.7"
-            pom {
-                description = 'Precheck Image Library'
-            }
+            version = '1.0.8'
+
+            // Menambahkan artifact
+            artifact("$buildDir/outputs/aar/precheckimagequality-release.aar")
         }
-    }
-    repositories {               // << --- ADD This
-        mavenLocal()
     }
 }
 
