@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'   
 }
 
 android {
@@ -32,6 +33,7 @@ android {
 
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            consumerProguardFiles 'consumer-rules.pro'
         }
     }
 
@@ -45,6 +47,22 @@ android {
     ndkVersion '25.1.8937393'
     buildFeatures {
 //        viewBinding true
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.github.Yoga3911'
+            artifactId = 'image-android-mlkit'
+            version = "1.0.7"
+            pom {
+                description = 'Precheck Image Library'
+            }
+        }
+    }
+    repositories {               // << --- ADD This
+        mavenLocal()
     }
 }
 

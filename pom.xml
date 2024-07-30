@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.Yoga3911</groupId>
     <artifactId>image-android-mlkit</artifactId>
-    <version>1.0</version>
+    <version>1.0.7</version>
     <packaging>pom</packaging>
     <description>Precheck Image Library</description>
 </project>
