@@ -55,7 +55,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.Yoga3911'
             artifactId = 'image-android-mlkit'
-            version = '1.0.10'
+            version = '1.0.11'
 
             // Menambahkan artifact
             artifact("$buildDir/outputs/aar/precheckimagequality-release.aar")
