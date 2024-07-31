@@ -1,7 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'maven-publish'   
+    id 'maven-publish'
+    // id 'com.vanniktech.maven.publish'
+    // id 'com.gradleup.nmcp'
 }
 
 android {
@@ -50,18 +52,6 @@ android {
     }
 }
 
-publishing {
-    publications {
-        release(MavenPublication) {
-            groupId = 'com.github.Yoga3911'
-            artifactId = 'image-android-mlkit'
-            version = '1.0.11'
-
-            // Menambahkan artifact
-            artifact("$buildDir/outputs/aar/precheckimagequality-release.aar")
-        }
-    }
-}
 
 dependencies {
 
@@ -69,7 +59,6 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation project(path: ':precheckimagequality')
     implementation project(path: ':precheckimagequality')
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'

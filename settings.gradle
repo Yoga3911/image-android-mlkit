@@ -16,5 +16,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "ML Kit Face Detection and Tracking"
 include ':app'
-include ':app:precheckimagequality'
 include ':precheckimagequality'
+// include ':app:precheckimagequality'

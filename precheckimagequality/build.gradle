@@ -1,6 +1,9 @@
 plugins {
-    id 'com.android.library'
+    id 'com.android.library' 
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
+    // id 'com.vanniktech.maven.publish' 
+    // id 'com.gradleup.nmcp'
 }
 
 android {
@@ -35,6 +38,7 @@ android {
 //        viewBinding true
     }
 }
+
 
 dependencies {
 
