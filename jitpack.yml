@@ -5,4 +5,4 @@ before_install:
   - ./scripts/prepareJitpackEnvironment.sh
 install:
   - FILE="-Dfile=precheckimagequality-release.aar"
-  - mvn install:install-file $FILE -DgroupId=com.github.Yoga3911 -DartifactId=image-android-mlkit -Dversion=1.0.14 -Dpackaging=aar -DgeneratePom=true
+  - mvn install:install-file $FILE -DgroupId=com.github.Yoga3911 -DartifactId=image-android-mlkit -Dversion=1.0.15 -Dpackaging=aar -DgeneratePom=true

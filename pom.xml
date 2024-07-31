@@ -6,7 +6,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 
   <groupId>com.github.Yoga3911</groupId>
   <artifactId>image-android-mlkit</artifactId>
-  <version>1.0.14</version>
+  <version>1.0.15</version>
   <packaging>pom</packaging>
 
   <name>Precheck Image</name>
