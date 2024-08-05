@@ -29,17 +29,17 @@ class RectOverlay(context: Context?, attrs: AttributeSet?) : View(context, attrs
     }
 
 
-    override fun onDraw(canvas: Canvas?) {
-        var radius = min(width, height).toFloat() / 2f - 20
+    override fun onDraw(canvas: Canvas) {
+        val radius = min(width, height).toFloat() / 2f - 20
         super.onDraw(canvas)
-        canvas?.drawRect(0.0F,0.0F, width.toFloat(), height.toFloat(), blackPaint)
+        canvas.drawRect(0.0F,0.0F, width.toFloat(), height.toFloat(), blackPaint)
         // Draw a red circle in the center
         if(isGoodFrame) {
-            canvas?.drawCircle((width / 2).toFloat(), (height / 2).toFloat(), radius, greenPaint)
+            canvas.drawCircle((width / 2).toFloat(), (height / 2).toFloat(), radius, greenPaint)
         } else {
-            canvas?.drawCircle((width / 2).toFloat(), (height / 2).toFloat(), radius, redPaint)
+            canvas.drawCircle((width / 2).toFloat(), (height / 2).toFloat(), radius, redPaint)
         }
-        canvas?.drawCircle((width / 2).toFloat(), (height / 2).toFloat(), radius - 20, transparentPaint)
+        canvas.drawCircle((width / 2).toFloat(), (height / 2).toFloat(), radius - 20, transparentPaint)
     }
 
     fun setGoodFrame() {
