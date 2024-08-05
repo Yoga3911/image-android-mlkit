@@ -1,5 +1,6 @@
 package com.interbio.precheckimagequality
 
+import MyImageAnalyzer
 import android.Manifest
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -195,6 +196,13 @@ class CaptureActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val imageAnalysis = ImageAnalysis.Builder()
+            .setTargetResolution(Size(200, 200)).build()
+
+        val analyzer = MyImageAnalyzer()
+
+        imageAnalysis.setAnalyzer(ContextCompat.getMainExecutor(this), analyzer)
 
         setContentView(R.layout.activity_capture)
         viewFinder = findViewById(R.id.viewFinder)
