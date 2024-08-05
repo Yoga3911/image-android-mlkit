@@ -197,10 +197,10 @@ class CaptureActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val imageAnalysis = ImageAnalysis.Builder()
-            .setTargetResolution(Size(200, 200)).build()
-
         val analyzer = MyImageAnalyzer()
+
+        val imageAnalysis = ImageAnalysis.Builder()
+            .setTargetResolution(analyzer.defaultTargetResolution).build()
 
         imageAnalysis.setAnalyzer(ContextCompat.getMainExecutor(this), analyzer)
 
