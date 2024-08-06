@@ -105,7 +105,7 @@ class CaptureActivity : AppCompatActivity() {
                 cameraProvider.unbindAll()
 
                 val imageAnalyzer = ImageAnalysis.Builder()
-//                    .setTargetResolution(Size(640, 480))
+                   // .setTargetResolution(faceDetectAnalyzer.defaultTargetResolution)
                     .setTargetAspectRatio(AspectRatio.RATIO_4_3)
                     .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
                     .setOutputImageFormat(ImageAnalysis.OUTPUT_IMAGE_FORMAT_YUV_420_888)
@@ -196,13 +196,6 @@ class CaptureActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        val analyzer = MyImageAnalyzer()
-
-        val imageAnalysis = ImageAnalysis.Builder()
-            .setTargetResolution(analyzer.defaultTargetResolution).build()
-
-        imageAnalysis.setAnalyzer(ContextCompat.getMainExecutor(this), analyzer)
 
         setContentView(R.layout.activity_capture)
         viewFinder = findViewById(R.id.viewFinder)

@@ -9,6 +9,6 @@ class MyImageAnalyzer : ImageAnalysis.Analyzer {
     }
 
     override fun getDefaultTargetResolution(): Size {
-        return Size(200, 200)
+        return Size(640, 480)
     }
 }

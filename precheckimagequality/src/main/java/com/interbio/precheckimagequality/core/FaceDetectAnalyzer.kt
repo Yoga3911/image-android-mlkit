@@ -56,6 +56,10 @@ class FaceDetectAnalyzer
     private var tfImageProcessor: ImageProcessor? = null
     private val tfImageBuffer = TensorImage(DataType.FLOAT32)
 
+    override fun getDefaultTargetResolution(): Size {
+        return Size(640, 480)
+    }
+
     constructor(
         context: Context,
         config: PrecheckImageQualityConfiguration,
